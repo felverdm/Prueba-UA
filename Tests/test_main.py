@@ -1,7 +1,7 @@
 import pytest
 from main import GetLightPokemonById, GetLightPokemonByName, GetPokemonById, GetPokemonByName
 
-
+# test de que los pokemon de los ids siguientes tienen definidos sus tipos
 @pytest.mark.parametrize(
     "input_id, expected",
     [
@@ -18,7 +18,7 @@ def test_GetLightPokemonById(input_id, expected):
     assert data.types[0].name == expected
 
 
-
+# test de que los pokemon de los siguientes nombres tienen ids definidos
 @pytest.mark.parametrize(
     "input_name, expected",
     [
